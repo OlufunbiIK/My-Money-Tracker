@@ -63,7 +63,7 @@ export default function Header({
 					</div>
 
 					{/* Desktop menu */}
-					<div className="hidden lg:flex flex-row gap-20 items-center">
+					<div className="hidden lg:flex flex-row gap-10 items-center">
 						<ul className="flex gap-8 cursor-pointer list-none text-[18px] leading-[21.94px] text-[#1F2329]">
 							<Link
 								to="/"
@@ -103,12 +103,12 @@ export default function Header({
 						<div className="flex gap-5">
 							<button
 								onClick={() => navigation("/login")}
-								className="bg-[#FFFFFF] text-[14px] border-[2px] hover:bg-[#034AB3] transition-all duration-500 ease-in-out hover:text-white border-[#034AB3] text-[#1F2329] rounded-[8px] px-[16px] py-[12px]"
+								className="bg-[#FFFFFF] text-[14px] border-[2px] hover:bg-[#034AB3] transition-all duration-500 ease-in-out hover:text-white border-[#034AB3] text-[#1F2329] rounded-[8px] px-[16px] py-[10px]"
 							>
 								Log in
 							</button>
 							<button
-								className="bg-[#034AB3] text-[14px] hover:bg-[#6fa7fc] hover:border-[#6fa7fc] transition-all duration-500 ease-in-out border-[2px] border-[#034AB3] text-[#FFFFFF] rounded-[8px] px-[16px] py-[12px]"
+								className="bg-[#034AB3] text-[14px] hover:bg-[#6fa7fc] hover:border-[#6fa7fc] transition-all duration-500 ease-in-out border-[2px] border-[#034AB3] text-[#FFFFFF] rounded-[8px] px-[16px] py-[10px]"
 								onClick={() => navigation("/signup")}
 							>
 								Sign Up

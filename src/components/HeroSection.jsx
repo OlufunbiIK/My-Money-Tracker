@@ -1,3 +1,5 @@
+import { Navigate } from "react-router-dom";
+
 export default function HeroSection() {
 	return (
 		<div
@@ -24,11 +26,11 @@ export default function HeroSection() {
 					data-aos-duration="600"
 					className="flex flex-col items-center lg:items-start w-full lg:w-[50%] gap-2 lg:gap-3"
 				>
-					<h1 className="text-[28px] sm:text-[32px] lg:text-[48px] font-bold text-center lg:text-left leading-tight lg:leading-none">
+					<h1 className="text-[28px] sm:text-[32px] lg:text-[48px] font-bold text-center lg:text-left leading-10 lg:leading-none">
 						<span className="text-green-300">Experience</span> a
 						fresh way to manage money
 					</h1>
-					<p className="text-[14px] sm:text-[16px] lg:text-[18px] text-center lg:text-left mb-4">
+					<p className="text-[14px] sm:text-[16px] lg:text-[18px] text-center lg:text-left mb-4 leading-6">
 						Reach your goal with personalized insights, custom
 						budgets, <br className="hidden lg:block" />
 						spend tracking, and subscription monitoring — all for

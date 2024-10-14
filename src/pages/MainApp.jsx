@@ -105,7 +105,7 @@ const Dashboard = () => {
 								data-aos="zoom-in"
 								data-aos-duration="1000"
 								key={index}
-								className="bg-[#034AB3] rounded-[8px] px-4 py-4 h-[142px] w-[350px] mx-auto md:w-[220px] mb-4 mt-4 items-center xxl:w-[450px]"
+								className="bg-[#034AB3] rounded-[8px] px-4 py-4 h-[142px] w-[350px] mx-auto md:w-[220px] mb-4 mt-4 items-center xl:[400px] xxl:w-[450px]"
 							>
 								<AccountCard
 									type={data.type}

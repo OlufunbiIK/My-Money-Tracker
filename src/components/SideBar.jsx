@@ -6,6 +6,8 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import logowhite from "../../public/assets/images/logoWhite.svg";
+import logo from "../../public/assets/images/logo.svg";
 
 const App = () => {
 	const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);

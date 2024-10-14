@@ -70,7 +70,7 @@ const Pricing = () => {
 	return (
 		<section className="py-12 px-6 md:px-12 lg:px-24 text-center ">
 			<h2 className="text-3xl font-bold mb-12 text-center">Pricing</h2>
-			<div className="flex flex-col md:flex-row justify-center md:space-x-8 space-y-8 md:space-y-0 ">
+			<div className="flex flex-col md:flex-row justify-center md:space-x-32 space-y-8 md:space-y-0 ">
 				{pricingData.map((card, index) => (
 					<PricingCard
 						key={index}

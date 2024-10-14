@@ -1,6 +1,7 @@
 import { FaFacebook } from "react-icons/fa";
 import { LuTwitter } from "react-icons/lu";
 import { AiOutlineInstagram } from "react-icons/ai";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 export default function Footer() {
 	return (
 		<footer className="relative left-0 right-0 bg-[#0052CC] text-white py-16 px-4 md:h-[535px] items-center">
@@ -88,7 +89,8 @@ export default function Footer() {
 					href="#top"
 					className="block mt-6 text-center text-white bg-[#034AB3] rounded-full w-10 h-10 leading-10 mx-auto"
 				>
-					&#8679;
+					{/* &#8679; */}
+					<FaArrowAltCircleUp className="ml-3 mt-3" />
 				</a>
 			</div>
 

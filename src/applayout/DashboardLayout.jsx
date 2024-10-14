@@ -39,7 +39,7 @@ const DashboardLayout = ({ theme, handleThemeChange }) => {
 			</div>
 
 			{/* Main Content */}
-			<div className="flex flex-col flex-1 md:ml-[100px] xl:ml-0 ">
+			<div className="flex flex-col flex-1 md:ml-[50px] xl:ml-0 ">
 				{/* Navbar */}
 				<Navbar theme={theme} handleThemeChange={handleThemeChange} />
 				{/* Pass theme and handler to Navbar */}
