@@ -8,11 +8,18 @@ import { onAuthStateChanged } from "firebase/auth";
 
 export const TransData = [
 	{
-		date: "1st, July 2021",
+		date: "10th, July 2021",
 		time: "9:52am",
 		type: "income",
 		purpose: "salary",
 		amount: "#30,000",
+	},
+	{
+		date: "16, July 2021",
+		time: "9:52am",
+		type: "Expense",
+		purpose: "Transportation",
+		amount: "#17,000",
 	},
 ];
 const AccountCard = ({ type, amount }) => {
