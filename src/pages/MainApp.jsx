@@ -96,16 +96,16 @@ const Dashboard = () => {
 				</p>
 			</div>
 
-			<div className="flex flex-col md:flex-row gap-4">
-				<div className="md:w-[70%]">
-					<div className="flex gap-6 flex-col md:flex-row mt-2">
+			<div className="flex flex-col lg:flex-row gap-4">
+				<div className="lg:w-[70%]">
+					<div className="flex gap-6 flex-col xl:flex-row mt-2 w-full">
 						{/* Loop through the dashboard data */}
 						{dashboardData.map((data, index) => (
 							<div
 								data-aos="zoom-in"
 								data-aos-duration="1000"
 								key={index}
-								className="bg-[#034AB3] rounded-[8px] px-4 py-4 h-[142px] w-[350px] mx-auto md:w-[220px] mb-4 mt-4 items-center xl:[400px] xxl:w-[450px]"
+								className="bg-[#034AB3] rounded-[8px] px-4 py-4 h-[142px] w-full  mx-auto  mb-4 mt-4 items-center xl:[400px] 2xl:w-[450px]"
 							>
 								<AccountCard
 									type={data.type}
@@ -124,7 +124,7 @@ const Dashboard = () => {
 					</div>
 					<Transactions TransData={transactionData} />
 				</div>
-				<div className="flex flex-col ">
+				<div className="flex flex-col w-full lg:w-[30%] ">
 					<TransactionPart />
 					<AddTransactionForm addTransaction={addTransaction} />
 				</div>

@@ -122,7 +122,7 @@ export default function Profile() {
 					</div>
 				</form>
 			)}
-			<div className="flex justify-center items-center">
+			<div className="mx-auto w-full md:flex md:justify-center">
 				<SaveButton />
 			</div>
 		</div>

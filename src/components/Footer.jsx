@@ -74,7 +74,7 @@ export default function Footer() {
 						<input
 							type="email"
 							placeholder="Enter your email"
-							className="flex-1 w-1 outline-none"
+							className="flex-1 w-1 outline-none text-[14px] lg:text-[20px]"
 						/>
 					</div>
 					<button className="bg-[#034AB3] text-white rounded-md w-auto px-8 h-[55px] py-2 mt-4">
@@ -95,7 +95,7 @@ export default function Footer() {
 			</div>
 
 			{/* Footer Bottom Section */}
-			<div className="w-full border-t border-gray-300 mt-10 pt-4 flex gap-4 md:gap-0 flex-col md:flex-row items-center justify-between bottom-0 px-4">
+			<div className="w-full mt-5 pt-4 flex gap-4 md:gap-0 flex-col md:flex-row items-center justify-between bottom-0 px-4">
 				{/* Empty div for alignment */}
 				<div className="flex-1"></div>
 

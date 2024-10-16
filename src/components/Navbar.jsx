@@ -51,7 +51,7 @@ const Navbar = () => {
 	}, [dropdownRef]);
 
 	return (
-		<div className="flex justify-between items-center z-1000 bg-white font-Montserrat h-[80px] border-b border-[#49505A] px-4 z-1000">
+		<div className="flex justify-between items-center bg-white font-Montserrat h-[80px] border-b border-[#49505A] px-4 z-1000">
 			<p className="text-xl font-bold leading-[24px] text-[#1F2329]">
 				{logic()}
 			</p>
@@ -68,7 +68,7 @@ const Navbar = () => {
 				{showUserProfile && (
 					<div
 						ref={dropdownRef}
-						className="absolute right-0 mt-20 w-48 bg-white border border-[#A8B1BD] rounded-md shadow-lg z-1000"
+						className="absolute right-0 mt-20 w-48 bg-white border border-[#A8B1BD] rounded-md shadow-lg z-[9999]"
 					>
 						<ul className="py-2 flex flex-col">
 							<Link

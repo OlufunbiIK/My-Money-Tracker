@@ -10,7 +10,7 @@ import logowhite from "../../public/assets/images/logoWhite.svg";
 import logo from "../../public/assets/images/logo.svg";
 
 const App = () => {
-	const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+	const [isMobileNavOpen, setIsMobileNavOpen] = useState(true);
 
 	const navigate = useNavigate(); // Add useNavigate for programmatic navigation
 	const { pathname } = useLocation();
@@ -127,7 +127,7 @@ const App = () => {
 			<div className="hidden md:block fixed inset-0 z-40 w-[205px] h-full bg-[#034AB3] text-white p-4">
 				<div className="mt-8">
 					<div className="flex justify-center mt-2">
-						<img src="assets/images/logoWhite.svg" alt="Logo" />
+						<img src={logowhite} alt="Logo" />
 					</div>
 					<p className="text-center mt-4 mb-4">My Money Tracker</p>
 				</div>

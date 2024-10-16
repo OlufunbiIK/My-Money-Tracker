@@ -26,10 +26,10 @@ export default function Budget() {
 					History
 				</p>
 				<p className="md:text-[18px] text-[14px]">
-					Monday 5th September, 2021{" "}
+					Monday 5th September, 2021
 				</p>
 			</div>
-			<div className="grid grid-cols-1 gap-5 md:grid-cols-[4fr_1fr] w-full">
+			<div className="grid grid-cols-1 gap-5 xl:grid-cols-[5fr_1fr] w-full">
 				<div>
 					<div className="flex gap-10 items-center px-3 w-full justify-between">
 						<p className="text-[#121417] text-[20px]">

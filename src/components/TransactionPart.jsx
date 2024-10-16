@@ -8,7 +8,7 @@ export default function TransactionPart() {
 		setShowIncome(!showIncome);
 	}
 	return (
-		<div className="md:w-[330px] mt-4 w-full">
+		<div className="mt-4 w-full">
 			<p className="text-[#49505A] text-[20px]">Overview</p>
 
 			<button

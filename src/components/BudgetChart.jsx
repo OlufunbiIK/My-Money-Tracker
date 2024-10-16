@@ -66,13 +66,13 @@ export default function BudgetChart() {
 			<p>Overview</p>
 			<button
 				onClick={HandleBudget}
-				className="bg-[#034AB3] text-[20px] py-2 px-4 rounded-lg md:w-[330px] mt-5 h-[75px] mb-1 text-[#FFFFFF] flex justify-between items-center w-full transition-transform transform hover:scale-105"
+				className="bg-[#034AB3] text-[20px] py-2 px-4 rounded-lg md:w-full mt-5 h-[75px] mb-1 text-[#FFFFFF] flex justify-between items-center w-full transition-transform transform hover:scale-105"
 			>
 				Budget <img src={dropdownimg} />
 			</button>
 			{budgetDrop && (
 				<div className="bg-white rounded shadow-lg p-3 border-[0.5px] border-[#6A7381] w-full">
-					<ul className="space-y-2 mb-4">
+					<ul className="space-y-2 mb-4 max-w-lg">
 						<Doughnut
 							data={data}
 							options={options}

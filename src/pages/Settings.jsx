@@ -149,13 +149,17 @@ export default function Settings() {
 
 	return (
 		<div
-			className={`flex flex-col w-full md:ml-10 mt-5 ${
+			className={`flex flex-col w-full md:ml-4 lg:ml-10 mt-5 ${
 				animate ? "animate-fade-slide-up" : ""
 			}`}
 		>
 			<div className="">
-				<p className="text-right mb-5">Monday 5th September, 2021</p>
-				<div className="flex md:gap-32">
+				<div>
+					<p className="text-right md:px-10 px-3">
+						Monday 5th September, 2021
+					</p>
+				</div>
+				<div className="flex gap-4 md:gap-24">
 					<h1>Select Currency</h1>
 					<form>
 						<div className="flex gap-4">
@@ -170,7 +174,7 @@ export default function Settings() {
 						{["USD", "EUR", "GBP", "NGN", "ZAR", "JPY", "BTC"].map(
 							(currency) => (
 								<div
-									className={`flex mb-5 ${
+									className={`flex mb-5 gap-2 ${
 										animate ? "animate-fade-slide-up" : ""
 									}`}
 									key={currency}
@@ -216,7 +220,7 @@ export default function Settings() {
 			</div>
 
 			<ThemeToggle />
-			<div className="flex justify-center items-center">
+			<div className="mx-auto w-full md:flex md:justify-center">
 				<SaveButton />
 			</div>
 		</div>
