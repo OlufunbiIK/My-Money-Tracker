@@ -14,20 +14,6 @@ export const TransData = [
 		purpose: "salary",
 		amount: "#30,000",
 	},
-	{
-		date: "30th, July 2021",
-		time: "9:52am",
-		type: "Expenses",
-		purpose: "Internet",
-		amount: "#2,000",
-	},
-	{
-		date: "30th, July 2021",
-		time: "9:52am",
-		type: "income",
-		purpose: "freelance work",
-		amount: "#8,000",
-	},
 ];
 const AccountCard = ({ type, amount }) => {
 	return (
