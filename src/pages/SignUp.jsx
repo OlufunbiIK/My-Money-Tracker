@@ -134,7 +134,7 @@ const SignUp = () => {
 						type="submit"
 						className="w-full p-3 mt-4 text-white bg-[#034AB3] rounded-md hover:bg-blue-700"
 					>
-						{loading ? "Loading...." : "Create Account"}
+						Create Account
 					</button>
 					{error && <p className="text-red-500">{error}</p>}
 				</form>
