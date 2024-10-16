@@ -36,7 +36,7 @@ const PricingCard = ({
 						className="flex items-center justify-center space-x-2"
 					>
 						{/* <span>⭐</span> */}
-						<span>{starImage}</span>
+						{/* <span>{starImage}</span> */}
 						<span>{feature}</span>
 					</li>
 				))}
