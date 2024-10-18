@@ -71,7 +71,7 @@ export default function BudgetChart() {
 				Budget <img src={dropdownimg} />
 			</button>
 			{budgetDrop && (
-				<div className="bg-white rounded shadow-lg p-3 border-[0.5px] border-[#6A7381] w-full">
+				<div className="flex flex-col justify-center items-center bg-white rounded shadow-lg p-3 border-[0.5px] border-[#6A7381] w-full">
 					<ul className="space-y-2 mb-4 max-w-lg">
 						<Doughnut
 							data={data}
