@@ -2,7 +2,7 @@ import { useState } from "react";
 import nextbtnimg from "../../public/assets/images/nextbtnimg.svg";
 import backbtnimg from "../../public/assets/images/backbtnimg.svg";
 
-const TransCard = ({ date, time, type, purpose, amount }) => {
+const TransCard = ({ date, time, type, purpose, amount, currencySymbol }) => {
 	return (
 		<div className="mt-4 mb-4">
 			<div className="flex gap-10 mb-4 text-[#49505A]">
@@ -36,6 +36,7 @@ const TransCard = ({ date, time, type, purpose, amount }) => {
 					}`}
 				>
 					{amount}
+					<p> {currencySymbol}</p>
 				</p>
 			</div>
 		</div>

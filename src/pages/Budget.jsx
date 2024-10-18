@@ -29,7 +29,7 @@ export default function Budget() {
 					Monday 5th September, 2021
 				</p>
 			</div>
-			<div className="grid grid-cols-1 gap-5 xl:grid-cols-[5fr_1fr] w-full">
+			<div className="grid grid-cols-1 gap-5 xl:grid-cols-[3fr_1.5fr] w-full">
 				<div>
 					<div className="flex gap-10 items-center px-3 w-full justify-between">
 						<p className="text-[#121417] text-[20px]">

@@ -1,12 +1,19 @@
 import { FaFacebook, FaGoogle, FaTwitter } from "react-icons/fa";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../Firebase";
+import {
+	auth,
+	db,
+	signInWithGoogle,
+	signInWithFacebook,
+	signInWithTwitter,
+} from "../Firebase";
 import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore/lite";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
+import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const SignUp = () => {
 	const [firstName, setFirstName] = useState("");
@@ -17,6 +24,7 @@ const SignUp = () => {
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
+	const provider = new GoogleAuthProvider();
 
 	const handleSignUp = async (e) => {
 		e.preventDefault();
@@ -24,8 +32,12 @@ const SignUp = () => {
 		if (password !== confirmpassword) {
 			setError("Passwords do not match");
 			toast.error("Passwords do not match");
+			setLoading(false);
 			return;
+		} else {
+			setError(""); // Reset error state
 		}
+
 		try {
 			// Step 1: Create user with Firebase Authentication
 			const userCredential = await createUserWithEmailAndPassword(
@@ -49,6 +61,37 @@ const SignUp = () => {
 		} catch (error) {
 			toast.error(error.message); // Error toast
 			console.log(error.message);
+			setLoading(false); // Reset loading state
+		}
+	};
+
+	const handleGoogleSignIn = async () => {
+		try {
+			const result = await signInWithPopup(auth, provider);
+			console.log(result.user);
+			// Handle post-sign-in actions here
+		} catch (error) {
+			toast.error(error.message);
+		}
+	};
+
+	const handleFacebookSignIn = async () => {
+		try {
+			const result = await signInWithFacebook();
+			console.log(result.user);
+			// Handle post-sign-in actions here
+		} catch (error) {
+			toast.error(error.message);
+		}
+	};
+
+	const handleTwitterSignIn = async () => {
+		try {
+			const result = await signInWithTwitter();
+			console.log(result.user);
+			// Handle post-sign-in actions here
+		} catch (error) {
+			toast.error(error.message);
 		}
 	};
 
@@ -132,6 +175,7 @@ const SignUp = () => {
 					</div>
 					<button
 						type="submit"
+						disabled={loading}
 						className="w-full p-3 mt-4 text-white bg-[#034AB3] rounded-md hover:bg-blue-700"
 					>
 						Create Account
@@ -140,13 +184,22 @@ const SignUp = () => {
 				</form>
 				<p className="mt-4 text-center">or sign up with</p>
 				<div className="flex justify-center mt-2 space-x-4">
-					<button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full bg-[#EAF1FB] hover:bg-gray-200">
+					<button
+						onClick={handleGoogleSignIn}
+						className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full bg-[#EAF1FB] hover:bg-gray-200"
+					>
 						<FaGoogle className="text-blue-500" />
 					</button>
-					<button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full bg-[#EAF1FB] hover:bg-gray-200">
+					<button
+						onClick={handleFacebookSignIn}
+						className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full bg-[#EAF1FB] hover:bg-gray-200"
+					>
 						<FaFacebook className="text-blue-600" />
 					</button>
-					<button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full bg-[#EAF1FB] hover:bg-gray-200">
+					<button
+						onClick={handleTwitterSignIn}
+						className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full bg-[#EAF1FB] hover:bg-gray-200"
+					>
 						<FaTwitter className="text-blue-400" />
 					</button>
 				</div>

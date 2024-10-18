@@ -8,14 +8,14 @@ import { onAuthStateChanged } from "firebase/auth";
 
 export const TransData = [
 	{
-		date: "10th, July 2021",
+		date: "2024-07-10",
 		time: "9:52am",
 		type: "income",
 		purpose: "salary",
 		amount: "#30,000",
 	},
 	{
-		date: "16, July 2021",
+		date: "2024-07-16",
 		time: "9:52am",
 		type: "Expense",
 		purpose: "Transportation",
@@ -90,7 +90,7 @@ const Dashboard = () => {
 			</div>
 
 			<div className="flex flex-col lg:flex-row gap-4">
-				<div className="lg:w-[70%]">
+				<div className="lg:w-[60%]">
 					<div className="flex gap-6 flex-col xl:flex-row mt-2 w-full">
 						{/* Loop through the dashboard data */}
 						{dashboardData.map((data, index) => (
@@ -117,7 +117,7 @@ const Dashboard = () => {
 					</div>
 					<Transactions TransData={transactionData} />
 				</div>
-				<div className="flex flex-col w-full lg:w-[30%] ">
+				<div className="flex flex-col w-full lg:w-[40%]">
 					<TransactionPart />
 					<AddTransactionForm addTransaction={addTransaction} />
 				</div>
