@@ -2,15 +2,15 @@ import { useState } from "react";
 import nextbtnimg from "../../public/assets/images/nextbtnimg.svg";
 import backbtnimg from "../../public/assets/images/backbtnimg.svg";
 
-const TransCard = ({ date, time, type, purpose, amount, currencySymbol }) => {
+const TransCard = ({ date, time, type, purpose, amount }) => {
 	return (
 		<div className="mt-4 mb-4">
-			<div className="flex gap-10 mb-4 text-[#49505A]">
+			<div className="flex md:gap-10 gap-4 mb-4 text-[#49505A]">
 				<p>{date}</p>
 				<p>{time}</p>
 			</div>
 			<div className="flex justify-between">
-				<div className="flex gap-20">
+				<div className="flex md:gap-20 gap-4">
 					<p
 						className={`capitalize ${
 							type === "income"
@@ -36,7 +36,6 @@ const TransCard = ({ date, time, type, purpose, amount, currencySymbol }) => {
 					}`}
 				>
 					{amount}
-					<p> {currencySymbol}</p>
 				</p>
 			</div>
 		</div>
@@ -59,10 +58,10 @@ export default function Transactions({ TransData }) {
 			<div
 				data-aos="zoom-out-up"
 				data-aos-duration="1000"
-				className="bg-white border-[0.5px] border-[#6A7381] rounded-[8px] px-4 mt-4 mx-2 "
+				className="bg-white border-[0.5px] border-[#6A7381] rounded-[8px] md:px-4 mt-4 md:mx-2 "
 			>
 				{/* Other components like filters */}
-				<div>
+				<div className="px-2 py-2">
 					<div className="w-full overflow-auto">
 						{currentItems.map((data, index) => (
 							<div
@@ -105,7 +104,7 @@ export default function Transactions({ TransData }) {
 							)
 						}
 						disabled={currentPage === totalPages}
-						className="bg-white rounded-md px-2 py-1 disabled:opacity-50 my-2"
+						className="bg-white rounded-md px-1 md:px-2 py-1 disabled:opacity-50 md:my-2 my-1"
 					>
 						<img src={nextbtnimg} />
 					</button>
