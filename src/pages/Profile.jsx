@@ -24,6 +24,27 @@ export default function Profile() {
 		return () => clearTimeout(timer);
 	}, []);
 
+	useEffect(() => {
+		const auth = getAuth();
+		const unsubscribe = auth.onAuthStateChanged((user) => {
+			if (user) {
+				setUser(user);
+				Firestore.collection("users")
+					.doc(user.uid)
+					.get()
+					.then((doc) => {
+						if (doc.exists) {
+							setUser({ ...user, ...doc.data() });
+						}
+					})
+					.finally(() => setLoading(false));
+			} else {
+				setLoading(false);
+			}
+		});
+		return () => unsubscribe();
+	}, []);
+
 	const HandleDropOptions = () => {
 		setDropOtherOptions(!dropOtherOptions);
 	};
@@ -75,7 +96,7 @@ export default function Profile() {
 						<input
 							type="text"
 							className="w-full p-3 border border-[#A8B1BD] rounded-md"
-							placeholder={firstName}
+							placeholder="FirstName"
 							defaultValue={user?.firstName || ""}
 							required
 						/>
@@ -87,7 +108,7 @@ export default function Profile() {
 						<input
 							type="text"
 							className="w-full p-3 border border-[#A8B1BD] rounded-md"
-							placeholder={lastName}
+							placeholder="lastName"
 							defaultValue={user?.lastName || ""}
 							required
 						/>
