@@ -3,24 +3,25 @@ import SideBar from "../components/SideBar";
 import Navbar from "../components/Navbar";
 
 const DashboardLayout = ({ theme, handleThemeChange }) => {
-	return (
-		<div className={`flex min-h-screen w-full ${theme}`}>
-			{/* Sidebar */}
-			<div className="md:w-[205px] w-0">
-				<SideBar theme={theme} /> {/* Pass theme to SideBar */}
-			</div>
+  return (
+    <div className={`min-h-screen w-full ${theme}`}>
+      {/* Sidebar - Fixed positioned */}
+      <SideBar theme={theme} />
 
-			{/* Main Content */}
-			<div className="flex flex-col flex-1  xl:ml-0 w-full">
-				{/* Navbar */}
-				<Navbar theme={theme} handleThemeChange={handleThemeChange} />
+      {/* Main Content Container - positioned to avoid sidebar */}
+      <div className="md:ml-[205px] ml-0 min-h-screen flex flex-col">
+        {/* Navbar - Fixed at top of main content */}
+        <div className="sticky top-0 z-30">
+          <Navbar theme={theme} handleThemeChange={handleThemeChange} />
+        </div>
 
-				<main className="p-4">
-					<Outlet />
-				</main>
-			</div>
-		</div>
-	);
+        {/* Scrollable Main content area */}
+        <main className="flex-1 p-4 overflow-y-auto">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
 };
 
 export default DashboardLayout;
